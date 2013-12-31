@@ -1,17 +1,14 @@
 #!/usr/bin/env python
 from optparse import OptionParser
-
-def wd_help():
-	print "Hello World!"
-	pass
-
-def wd_del_option():
-	parser = OptionParser()
-	#parser.add_option("-h","--help",dest="",help="help info",metavar="FILE")
-	parser.parse_args()
-	pass
+from parseDictionary import dictionary
 
 if __name__ == '__main__':
-	wd_del_option()
+	usage = "Usage: %prog [options] word"
+	parser = OptionParser(usage=usage)
+	(options, args) = parser.parse_args()
 
-
+	dictionary = dictionary()
+	for word in args:
+		dictionary.search(word)
+		pass
+ 
