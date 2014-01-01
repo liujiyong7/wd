@@ -7,8 +7,8 @@ class dictionary(object):
         self.domains=0;
         pass
 
-    def __init__(self):
-        dictionary_file = open("wordlist.json","r")
+    def __init__(self,pwd):
+        dictionary_file = open(pwd+"/wordlist.json","r")
         self.s = json.load(dictionary_file)
         pass
 
