@@ -21,7 +21,7 @@ class dictionary(object):
             print word
             print "\t"+wd['pronunciation']
             print "\t"+wd['meaning']
-    	pass
+        pass
 
 
 
